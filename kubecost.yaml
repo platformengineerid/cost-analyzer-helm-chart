@@ -19942,6 +19942,9 @@ spec:
     - name: tcp-model
       port: 9003
       targetPort: 9003
+    - name: debug
+      port: 40000
+      targetPort: 40000
     - name: tcp-frontend
       port: 9090
       targetPort: 9090
@@ -20325,6 +20328,9 @@ spec:
           ports:
           - name: tcp-model
             containerPort: 9003
+            protocol: TCP
+          - name: debug
+            containerPort: 40000
             protocol: TCP
           - name: tcp-frontend
             containerPort: 9090
